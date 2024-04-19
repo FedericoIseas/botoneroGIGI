@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botonero con sonido y cambio de color</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f1f1f1;
+    }
+
+    .boton-container {
+        text-align: center;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .boton:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+<body>
+
+<div class="boton-container">
+    <audio id="ES UN BB" src="Es1bb.mp3"></audio>
+    <audio id="AAAMO" src="Amo.mp3"></audio>
+    <audio id="ME QUIERO MORIR" src="Mequieromorir.mp3"></audio>
+    <audio id="AHRE" src="Ahre.mp3"></audio>
+    <audio id="FIN" src="fin.mp3"></audio>
+
+    <button class="boton" onclick="playSound('ES UN BB')">ES UN BB</button>
+    <button class="boton" onclick="playSound('AAAMO')">AAAMO</button>
+    <button class="boton" onclick="playSound('ME QUIERO MORIR')">ME QUIERO MORIR</button>
+    <button class="boton" onclick="playSound('AHRE')">AHRE</button>
+    <button class="boton" onclick="playSound('FIN')">FIN</button>
+</div>
+
+<script>
+    function playSound(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
+
